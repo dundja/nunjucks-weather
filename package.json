@@ -4,7 +4,8 @@
     "description": "weather fetch with nunjucks",
     "main": "app.js",
     "scripts": {
-        "start": "nodemon -e js,html,css,njk"
+        "dev": "nodemon -e js,html,css,njk",
+        "start": "node app.js"
     },
     "author": "Radivoje Dundjerovic",
     "license": "ISC",
