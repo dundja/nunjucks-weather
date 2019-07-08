@@ -1,0 +1,231 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    justify-self: center;
+    align-self: center;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffa769;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+/* weather */
+.weather {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    color: #ca8d77;
+}
+.weather__main-data {
+    display: flex;
+    flex-direction: column;
+}
+.weather__main-data__top {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.weather__main-data--icon {
+    margin-right: 1rem;
+}
+.weather__main-data--icon i {
+    font-size: 6rem;
+}
+.weather__main-data--temp {
+    font-size: 5rem;
+    margin-left: 1rem;
+    display: flex;
+}
+.weather__main-data--temp-units {
+    margin-left: -1.2rem;
+    font-size: 2rem;
+    display: block;
+    margin-left: 0.5rem;
+}
+.weather__main-data--desc {
+    font-size: 1.6rem;
+    text-align: center;
+}
+.weather__secondary-data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.weather__secondary-data-pressure,
+.weather__secondary-data-humidity,
+.weather__secondary-data-wind {
+    font-size: 1.1rem;
+}
+
+/* switch button */
+.switch-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    font-size: 1rem;
+}
+.switch-btn__cmd-toggle {
+    display: none;
+}
+.switch-btn__cmd-toggle--label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: #6c6753;
+    border-radius: 4px;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+.switch-btn__cmd-toggle--label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    margin-left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #6c6753;
+    transition: all 400ms ease;
+}
+.switch-btn__units-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.switch-btn
+    > .switch-btn__cmd-toggle:checked
+    + .switch-btn__cmd-toggle--label::before {
+    margin-left: calc(30px - 16px);
+}
+
+/* nav */
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-data {
+}
+
+.location-data__form {
+    position: relative;
+    display: flex;
+    height: 6rem;
+}
+
+.location-data__input {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: 2.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: #ffa769;
+}
+.location-data__input:focus ~ .location-data__search-btn,
+.location-data__input:focus ~ .location-data__search-btn:active {
+    color: #ffa769;
+}
+.location-data__input::placeholder {
+    color: #999999;
+}
+.location-data__search-btn {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 3rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.location-data__search-btn i {
+    font-size: 3rem;
+}
+
+.datetime-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #999999;
+    margin-top: 0.5rem;
+}
+
+/* day */
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #ca8d77;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+.day__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day__icon {
+}
+
+.day__time {
+    font-size: 1rem;
+}
+
+.day__summary {
+    font-size: 1.1rem;
+}
+
+.day__temps {
+    font-size: 1rem;
+}
+
+.day__temps-units {
+}

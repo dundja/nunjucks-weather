@@ -1,0 +1,35 @@
+<div class="weather__main-data">
+    <div class="weather__main-data__top">
+        <div class="weather__main-data--icon">
+            <i class="fas fa-cloud"></i>
+        </div>
+        <div class="weather__main-data--temp">
+            <span id="curr-temp-value">{{currently.temperature}}</span>
+            <span class="weather__main-data--temp-units" id="temp-units">
+                {% if units %}
+                °C
+                {% else %}
+                °F
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    <div class="weather__main-data--desc" id="curr-weather-descrip">
+        {{ daily.summary }}
+    </div>
+</div>
+
+<div class="weather__secondary-data">
+    <div class="weather__secondary-data-pressure">
+        <i class="fas fa-tachometer-alt"></i>
+        <span id="curr-pressure">{{currently.pressure}}</span></span>
+</div>
+<div class="weather__secondary-data-humidity">
+    <i class="fas fa-tint"></i>
+    <span id="curr-humidity">{{currently.humidity}}</span>
+</div>
+<div class="weather__secondary-data-wind">
+    <i class="fas fa-wind" id="curr-wind-icon"></i>
+    <span id="curr-wind-data">{{currently.windSpeed}}</span>
+</div>
+</div>

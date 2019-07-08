@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather in your place</title>
+        <!-- <link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/> -->
+        <link rel="stylesheet" href="./style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    </head>
+
+    <body>
+        {# Switch button #}
+        {% include "partials/switch-button.njk" %}
+        <main>
+            {% include "partials/search-bar.njk" %}
+            {% block body %}{% endblock %}
+        </main>
+        <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

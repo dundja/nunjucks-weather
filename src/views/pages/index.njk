@@ -1,0 +1,9 @@
+{% extends 'layouts/default.njk' %}
+
+{% block body %}
+    <div class="weather">
+        {% include "partials/current-weather.njk" %}
+        {% include "partials/days.njk" %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+# Dependency folders #
+/node_modules
+
+# Compiled sources #
+/dist
+
+# User generated #
+*.log
+.tmp
+.idea
+.vscode
+.DS_Store
+test
+tests
+.env

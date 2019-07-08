@@ -1,0 +1,33 @@
+{% asyncAll day in daily.data %}
+<div class="day">
+    <div class="day__date">
+        <figure>
+            <canvas id="icon{{loop.index0}}" class="icon icon{{loop.index0}} {{day.icon}}" width="50" height="50"></canvas>
+        </figure>
+        <p class="day__time">{{day.time}}</p>
+    </div>
+    <div class="day__summary">
+        {{day.summary}}
+    </div>
+    <div class="day__temps">
+        <p>Min - {{day.temperatureMin}}
+            <span class="day__temps-units">
+                {% if units %}
+                °C
+                {% else %}
+                °F
+                {% endif %}
+            </span>
+        </p>
+        <p>Max - {{day.temperatureMax}}
+            <span class="day__temps-units">
+                {% if units %}
+                °C
+                {% else %}
+                °F
+                {% endif %}
+            </span>
+        </p>
+    </div>
+</div>
+{% endall %}
